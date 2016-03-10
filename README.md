@@ -15,4 +15,6 @@ chmod linux-local-enum.sh
 ./linux-local-enum.sh 
 ```
 
+The script logs all output to file enum.log, which is created in the script root directory. 
+
 Enjoy. 
