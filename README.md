@@ -5,7 +5,7 @@ Check out the post on [Linux Local Enumeration Script](https://highon.coffee/blo
 
 The script performs basic linux local enumeration, a first step in the local privilege escalation process.
 
-[Imgur](http://i.imgur.com/cHvO7Rt.gif)
+![linux local priv esc](http://i.imgur.com/cHvO7Rt.gif)
 
 Copy script to target and execute it: 
 
