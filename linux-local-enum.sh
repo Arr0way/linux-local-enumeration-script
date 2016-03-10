@@ -183,7 +183,6 @@ printf "$NORMAL"
 
 /bin/cat /etc/passwd
 
-
 printf "\n"
 printf "$BLUE"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
@@ -242,7 +241,7 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
 printf "##"
 printf "\n"
 printf "$RED"
-printf "$BLUE## $RED Sticky Bit Files"
+printf "$BLUE## $RED root owned SUID Files"
 printf "\n"
 printf "$BLUE"
 printf "##"
@@ -251,7 +250,24 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
 printf "\n"
 printf "$NORMAL"
 
-/usr/bin/find / -perm -g=s -o -perm -4000 ! -type l -maxdepth 3 -exec ls -ld {} \; 2>/dev/null
+/usr/bin/find / -user root -perm -4000 -print 2>/dev/null
+
+printf "\n"
+printf "$BLUE"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
+printf "##"
+printf "\n"
+printf "$RED"
+printf "$BLUE## $RED root owned GUID Files"
+printf "\n"
+printf "$BLUE"
+printf "##"
+printf "\n"
+printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
+printf "\n"
+printf "$NORMAL"
+
+/usr/bin/find / -group root -perm -2000 -print  2>/dev/null
 
 printf "\n"
 printf "$BLUE"
