@@ -108,7 +108,7 @@ printf "\n"
 printf "\n"
 /bin/cat /etc/sysconfig/network-scripts/ifcfg-eth0
 printf "\n"
-/sbin/ip
+/sbin/ip a
 printf "\n"
 /sbin/ifconfig
 printf "\n"
@@ -327,7 +327,7 @@ printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
 printf "##"
 printf "\n"
 printf "$red"
-printf "$blue## $red World Writable FIles"
+printf "$blue## $red World Writable Files"
 printf "\n"
 printf "$blue"
 printf "##"
@@ -423,7 +423,7 @@ printf "\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
 printf "\n"
 printf "$reset"
-/bin/ps -ef | /bin/grep root
+/bin/ps -ef | /bin/grep [r]oot
 
 
 printf "\n"
