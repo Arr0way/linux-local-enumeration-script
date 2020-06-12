@@ -423,7 +423,7 @@ printf "\n"
 printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' '#'
 printf "\n"
 printf "$reset"
-/bin/ps -ef | /bin/grep [r]oot
+/bin/ps -ef | /bin/grep "[r]oot"
 
 
 printf "\n"
